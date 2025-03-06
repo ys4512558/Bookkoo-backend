@@ -238,7 +238,6 @@ public class MemberInfoServiceImpl implements MemberInfoService {
     @Override
     @Transactional
     @CacheEvict(value = "member_profile_info", key = "#memberId")
-    @CachePut(value = "member_profile_info", key = "#memberId")
     public ResponseMemberProfileDto updateMemberInfo(
         Long memberId, RequestUpdateMemberInfoDto memberInfoUpdateDto,
         MultipartFile profileImg) {
