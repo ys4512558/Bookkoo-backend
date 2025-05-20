@@ -21,6 +21,7 @@ public class CookieUtils {
         cookie.setPath("/");
         cookie.setHttpOnly(true);
         cookie.setMaxAge((int) expiration.getSeconds());
+        cookie.setSecure(true);
         return cookie;
     }
 
